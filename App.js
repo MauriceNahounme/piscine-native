@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <ModalApp />
-      <StatusBar style="auto" />
+      {/* <StatusBar style="auto" /> */}
     </>
   );
 }
