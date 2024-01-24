@@ -1,11 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import InputApp from '../components/InputApp'
 
 const Home = () => {
   return (
-    <View>
-      <Text>Hello voici ma première page home.screen</Text>
-    </View>
+    <>
+      <InputApp />
+    </>
   )
 }
 

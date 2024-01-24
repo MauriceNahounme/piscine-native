@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { TextInput } from 'react-native-paper';
+import { TextInput, Text } from 'react-native-paper';
+import { View } from 'react-native';
 import BtnApp from './Button';
 
 const InputApp = () => {
@@ -11,6 +12,8 @@ const InputApp = () => {
 
   return (
     <>
+      <Text style={{textAlign: "center", margin: 20, fontSize: 16}}>Formulaire UI</Text>
+      <View style={{padding: 15}}>
       <TextInput
       mode='outlined'
       label="Nom"
@@ -45,8 +48,9 @@ const InputApp = () => {
       value={confirmPassword}
       onChangeText={text => setConfirmPassword(text)}
     />
+      </View>
 
-    <BtnApp mode="contained" text='Envoyer' />
+    <BtnApp  mode="contained" text='Envoyer' />
     </>
   )
 }

@@ -3,6 +3,7 @@ import { Modal, Portal, Text, PaperProvider } from 'react-native-paper';
 import { StyleSheet, View } from "react-native";
 import BtnApp from './Button'
 import UserList from './UserList';
+import InputApp from './InputApp';
 
 const ModalApp = () => {
   const [visible, setVisible] = useState(false);
@@ -25,14 +26,14 @@ const ModalApp = () => {
       <PaperProvider>
         <Portal>
           <Modal visible={visible} onDismiss={hideModal} contentContainerStyle={styles.modalStyle}>
-            <Text>Example Modal.  Click outside this area to dismiss.</Text>
+            <UserList />
           </Modal>
-
         </Portal>
-          <UserList />
 
+        <InputApp />
+        
         <View style={styles.btn}>
-          <BtnApp mode="contained" text="Ouvrir" icon={null} handlePress={showModal}  />
+          <BtnApp mode="contained" text="Ouvrir modal" icon={null} handlePress={showModal}  />
         </View>
       
       </PaperProvider>
