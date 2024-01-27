@@ -1,13 +1,24 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import ModalApp from "./components/ModalApp";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Dashboard from "./screen/dashboard.screen";
+import Login from "./screen/login.screen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <>
-      <ModalApp />
-      {/* <StatusBar style="auto" /> */}
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Login}
+          options={{ title: "Welcome" }}
+        />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
